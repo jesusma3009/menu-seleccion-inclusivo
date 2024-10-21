@@ -1,0 +1,25 @@
+/* Ocultar el menú inicialmente */
+[role="menu"] {
+  display: none;
+}
+
+/* Mostrar el menú cuando aria-expanded es true */
+[aria-expanded="true"] + [role="menu"] {
+  display: block;
+}
+
+/* Añadir una marca de verificación al elemento seleccionado */
+[role="menuitemradio"][aria-checked="true"]::before {
+  content: '✔ ';
+}
+
+/* Ocultar visualmente la región en vivo */
+#retroalimentacionMenu {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
